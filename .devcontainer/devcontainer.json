@@ -15,7 +15,8 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"github.vscode-pull-request-github"
+		"github.vscode-pull-request-github",
+		"ms-vsliveshare.vsliveshare-pack"
 		//"dbaeumer.vscode-eslint"
 	],
 	
