@@ -6,7 +6,8 @@ if (process.env.NODE_ENV !== 'production') {
         throw new Error("ERROR: You need to create a file called .env then add \"TOKEN = (https://discord.com/developers/applications Token goes here)\"");
     }
 }
-
+var test = 5;
+let testa = 5;
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', () => {
