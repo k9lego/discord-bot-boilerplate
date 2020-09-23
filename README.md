@@ -20,7 +20,7 @@ Install [Visual Studio Code](https://code.visualstudio.com/).
 
 [Follow the Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
 
-# MacOS (Not Tested)
+### MacOS (Not Tested)
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 Install [Visual Studio Code](https://code.visualstudio.com/).
