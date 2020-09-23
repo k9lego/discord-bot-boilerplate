@@ -26,7 +26,8 @@
         "adambaldwin.vscode-nsp",
         "deepcode.deepcode",
         "pmbenjamin.vscode-snyk",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "shd101wyy.markdown-preview-enhanced"
         //"dbaeumer.vscode-eslint"
     ],
 
