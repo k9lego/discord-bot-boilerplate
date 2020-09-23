@@ -20,7 +20,8 @@
         "github.vscode-pull-request-github",
         "ms-vsliveshare.vsliveshare-pack",
         "hookyqr.beautify",
-        "snyk-security.vscode-vuln-cost"
+        "snyk-security.vscode-vuln-cost",
+        "aaron-bond.better-comments"
         //"dbaeumer.vscode-eslint"
     ],
 
