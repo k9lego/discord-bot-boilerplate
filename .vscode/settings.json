@@ -5,5 +5,11 @@
     "editor.tabSize": 4,
     "files.autoSave": "onFocusChange",
     "git.autofetch": true,
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "git.autofetchPeriod": 180,
+    "git.autorefresh": true,
+    "git.autoRepositoryDetection": true,
+    "git.confirmEmptyCommits": true,
+    "git.confirmForcePush": true,
+    "git.enableSmartCommit": true, // This makes it commit all changes when none are staged.
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
 }
