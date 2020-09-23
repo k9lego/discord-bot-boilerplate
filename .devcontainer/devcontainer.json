@@ -28,7 +28,6 @@
         "pmbenjamin.vscode-snyk",
         "eamodio.gitlens",
         "dbaeumer.vscode-eslint",
-        "rvest.vs-code-prettier-eslint",
         "redhat.fabric8-analytics"
     ],
 
