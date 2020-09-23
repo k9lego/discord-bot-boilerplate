@@ -1,4 +1,4 @@
-# discord-bot-boilerplate
+# Information Page for this Discord Bot Boilerplate
 Contains everything you need to develop a super basic Discord Bot using Visual Studio Code's Remote Development with Docker.
 
 ## Installation and Setup
