@@ -21,14 +21,16 @@
         "ms-vsliveshare.vsliveshare-pack",
         "hookyqr.beautify",
         "snyk-security.vscode-vuln-cost",
-        "aaron-bond.better-comments",
         "ms-vscode.hexeditor",
         "adambaldwin.vscode-nsp",
         "deepcode.deepcode",
         "pmbenjamin.vscode-snyk",
         "eamodio.gitlens",
         "dbaeumer.vscode-eslint",
-        "redhat.fabric8-analytics"
+        "redhat.fabric8-analytics",
+        // Local only extensions that are "installed" in the container just to show they exist and to encourage one to install them.
+        "aaron-bond.better-comments",
+        "mikestead.dotenv"
     ],
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
