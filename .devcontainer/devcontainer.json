@@ -19,7 +19,8 @@
     "extensions": [
         "github.vscode-pull-request-github",
         "ms-vsliveshare.vsliveshare-pack",
-        "hookyqr.beautify"
+        "hookyqr.beautify",
+        "snyk-security.vscode-vuln-cost"
         //"dbaeumer.vscode-eslint"
     ],
 
