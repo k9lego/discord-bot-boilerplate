@@ -21,7 +21,8 @@
         "ms-vsliveshare.vsliveshare-pack",
         "hookyqr.beautify",
         "snyk-security.vscode-vuln-cost",
-        "aaron-bond.better-comments"
+        "aaron-bond.better-comments",
+        "ms-vscode.hexeditor"
         //"dbaeumer.vscode-eslint"
     ],
 
