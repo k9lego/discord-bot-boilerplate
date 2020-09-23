@@ -28,7 +28,8 @@
         "pmbenjamin.vscode-snyk",
         "eamodio.gitlens",
         "dbaeumer.vscode-eslint",
-        "rvest.vs-code-prettier-eslint"
+        "rvest.vs-code-prettier-eslint",
+        "redhat.fabric8-analytics"
     ],
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
