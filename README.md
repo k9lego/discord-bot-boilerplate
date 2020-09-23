@@ -29,7 +29,7 @@ Install [Visual Studio Code](https://code.visualstudio.com/).
 
 ### Debian-based Linux (Tested on Ubuntu 18.04, Does not work on WSL)
 
-**To setup on Linux is a bit more difficult than Windows, because your Github credentials will not be given to the container unless you do these extra steps.**
+**To setup on Linux is a bit more difficult than Windows 10 Pro, because your Github credentials will not be given to the container unless you do these extra steps.**
 
 First, you need to [install Docker CE/EE 18.06+ and Docker Compose 1.21+](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script). You can check [here](https://code.visualstudio.com/docs/remote/containers#_system-requirements) if the requirements have changed. 
 Note: The SNAP package **WILL NOT** work.
@@ -68,7 +68,7 @@ Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning 
 ## Universal Instructions (Follow the Instructions for your OS then come here)
 You'll then need to install the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Once you open up Visual Studio Code, go to the extensions tab and search for ``ms-vscode-remote.remote-containers`` and Install it.
 
-Now open the Command Palette. To open it, hit F1, otherwise right click the green icon in the lower right corner will get you to where you need as well.
+Now open the Command Palette. To open it, hit F1. Otherwise right click the green icon in the lower right corner will get you the ``Remote-Containers`` commands.
 
 Now click ``Remote-Containers: Clone Repository in Container Volume...``
 

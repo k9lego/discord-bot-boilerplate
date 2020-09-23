@@ -28,11 +28,12 @@
         "pmbenjamin.vscode-snyk",
         "eamodio.gitlens",
         "shd101wyy.markdown-preview-enhanced",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "rvest.vs-code-prettier-eslint"
     ],
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    //"forwardPorts": [],
+    // "forwardPorts": [],
 
     // Specifies a command that should be run after the container has been created.
     "postCreateCommand": "yarn install",
