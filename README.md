@@ -9,6 +9,15 @@ Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 ### Windows 10 Home (Not Tested)
 
+Follow these instructions to install Docker in WSL, then install Visual Studio Code
+https://docs.docker.com/docker-for-windows/wsl/
+
+### Windows 10 Universal 
+
+Install [Visual Studio Code](https://code.visualstudio.com/).
+Now follow the [Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
+
+
 # MacOS (Not Tested)
 
 ### Debian-based Linux (Tested on Ubuntu 18.04, Does not work on WSL)
