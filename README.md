@@ -3,6 +3,15 @@ Contains everything you need to develop a super basic Discord Bot using Visual S
 
 ## Installation and Setup
 
+### Windows 10 Pro+ (Tested on Windows 10 Pro Build 19041.508) [Click Here to go to Windows 10 Home]()
+
+Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+###
+
+### Windows 10 Home (Not Tested)
+
+
 ### Debian-based Linux (Tested on Ubuntu 18.04, Does not work on WSL)
 
 **To setup on Linux is a bit more difficult than Windows, because your Github credentials will not be given to the container unless you do these extra steps.**
@@ -40,6 +49,8 @@ git clone https://github.com/k9lego/discord-bot-boilerplate && rm -rf ~/temp_doc
 ```
 Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning it is only being used to have you authenticate your GitHub credentials. If this does not work, try cloning your own private GitHub repository. Once you've authenticated with GitHub, it'll save your credentials in your Keychain and you should not need to do this again.
 
+
+## Universal Instructions (Follow the Instructions for your OS then come here)
 You'll then need to install the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Once you open up Visual Studio Code, go to the extensions tab and search for ``ms-vscode-remote.remote-containers`` and Install it.
 
 Now open the Command Palette. To open it, hit F1, otherwise right click the green icon in the lower right corner will get you to where you need as well.
