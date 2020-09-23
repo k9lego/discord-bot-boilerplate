@@ -6,18 +6,14 @@ Contains everything you need to develop a super basic Discord Bot using Visual S
 ### Windows 10 Pro+ (Tested on Windows 10 Pro Build 19041.508) [Click Here to go to Windows 10 Home](#windows-10-home-not-tested)
 
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+Install [Visual Studio Code](https://code.visualstudio.com/).
 
-[Follow the universal Windows instructions](#windows-10-universal-follow-the-instructions-for-your-specific-version-of-windows-10-then-come-here)
+[Follow the Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
 
 ### Windows 10 Home (Not Tested)
 
 Follow these instructions to install Docker with WSL 2 since Windows 10 Home does not have the dependencies needed.
 https://docs.docker.com/docker-for-windows/wsl/
-
-[Follow the universal Windows instructions](#windows-10-universal-follow-the-instructions-for-your-specific-version-of-windows-10-then-come-here)
-
-### Windows 10 Universal (Follow the instructions for your specific version of Windows 10 then come here)
-
 Install [Visual Studio Code](https://code.visualstudio.com/).
 
 [Follow the Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
