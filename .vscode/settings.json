@@ -2,5 +2,6 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
     "files.autoSave": "onFocusChange",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "editor.defaultFormatter": "HookyQR.beautify"
 }
