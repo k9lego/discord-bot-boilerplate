@@ -38,7 +38,6 @@ git config --global credential.helper /usr/share/doc/git/contrib/credential/libs
 mkdir ~/temp_docker/ && cd ~/temp_docker/
 git clone https://github.com/k9lego/discord-bot-boilerplate && rm -rf ~/temp_docker/
 ```
-Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning it is only being used to have you authenticate your GitHub credentials. If this does not work, try cloning your own private GitHub repository.
-
+Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning it is only being used to have you authenticate your GitHub credentials. If this does not work, try cloning your own private GitHub repository. Once you've authenticated with GitHub, it'll save your credentials in your Keychain and you should not need to do this again.
 
 You'll then need to install the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Once you open up Visual Studio Code, go to the extensions tab and search for ``ms-vscode-remote.remote-containers`` and Install it.
