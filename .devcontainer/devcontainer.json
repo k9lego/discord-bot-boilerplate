@@ -27,7 +27,6 @@
         "deepcode.deepcode",
         "pmbenjamin.vscode-snyk",
         "eamodio.gitlens",
-        "shd101wyy.markdown-preview-enhanced",
         "dbaeumer.vscode-eslint",
         "rvest.vs-code-prettier-eslint"
     ],
