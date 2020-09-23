@@ -25,7 +25,8 @@
         "ms-vscode.hexeditor",
         "adambaldwin.vscode-nsp",
         "deepcode.deepcode",
-        "pmbenjamin.vscode-snyk"
+        "pmbenjamin.vscode-snyk",
+        "eamodio.gitlens"
         //"dbaeumer.vscode-eslint"
     ],
 
