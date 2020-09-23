@@ -22,7 +22,9 @@
         "hookyqr.beautify",
         "snyk-security.vscode-vuln-cost",
         "aaron-bond.better-comments",
-        "ms-vscode.hexeditor"
+        "ms-vscode.hexeditor",
+        "adambaldwin.vscode-nsp",
+        "deepcode.deepcode"
         //"dbaeumer.vscode-eslint"
     ],
 
