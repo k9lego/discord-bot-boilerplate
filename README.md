@@ -41,3 +41,6 @@ git clone https://github.com/k9lego/discord-bot-boilerplate && rm -rf ~/temp_doc
 Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning it is only being used to have you authenticate your GitHub credentials. If this does not work, try cloning your own private GitHub repository. Once you've authenticated with GitHub, it'll save your credentials in your Keychain and you should not need to do this again.
 
 You'll then need to install the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Once you open up Visual Studio Code, go to the extensions tab and search for ``ms-vscode-remote.remote-containers`` and Install it.
+
+Now open the Command Palette -- To open, hit F1 or right click the green icon in the lower right corner.
+ ``Remote-Containers: Clone Repository in Container Volume...`` from the 
