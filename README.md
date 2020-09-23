@@ -42,5 +42,10 @@ Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning 
 
 You'll then need to install the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Once you open up Visual Studio Code, go to the extensions tab and search for ``ms-vscode-remote.remote-containers`` and Install it.
 
-Now open the Command Palette -- To open, hit F1 or right click the green icon in the lower right corner.
- ``Remote-Containers: Clone Repository in Container Volume...``
+Now open the Command Palette. To open it, hit F1, otherwise right click the green icon in the lower right corner will get you to where you need as well.
+
+Now click ``Remote-Containers: Clone Repository in Container Volume...``
+
+Finally, select ``Create a Unique Volume`` and your workspace should be setup!
+
+
