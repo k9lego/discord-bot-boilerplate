@@ -28,6 +28,7 @@
         "eamodio.gitlens",
         "dbaeumer.vscode-eslint",
         "redhat.fabric8-analytics",
+        "gruntfuggly.todo-tree",
         // Local only extensions that are "installed" in the container just to show they exist and to encourage one to install them.
         "aaron-bond.better-comments",
         "mikestead.dotenv"
