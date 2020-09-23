@@ -3,7 +3,7 @@ Contains everything you need to develop a super basic Discord Bot using Visual S
 
 ## Installation and Setup
 
-### Windows 10 Pro+ (Tested on Windows 10 Pro Build 19041.508) [Does NOT work for Windows 10 Home](#windows-10-home-not-tested)
+### Windows 10 Pro+ (Tested on Pro Build 19041.508) [Does NOT work for Windows 10 Home](#windows-10-home-not-tested)
 
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
