@@ -24,7 +24,8 @@
         "aaron-bond.better-comments",
         "ms-vscode.hexeditor",
         "adambaldwin.vscode-nsp",
-        "deepcode.deepcode"
+        "deepcode.deepcode",
+        "pmbenjamin.vscode-snyk"
         //"dbaeumer.vscode-eslint"
     ],
 
