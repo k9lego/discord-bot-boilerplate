@@ -2,7 +2,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.standard": true
     },
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
     "editor.tabSize": 2,
