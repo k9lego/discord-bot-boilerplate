@@ -1,8 +1,11 @@
 {
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
-    "editor.tabSize": 4,
+    "editor.tabSize": 2,
     "files.autoSave": "afterDelay",
     "git.autofetch": true,
     "git.autofetchPeriod": 180,
@@ -12,4 +15,9 @@
     "git.confirmForcePush": true,
     "git.enableSmartCommit": true, // Commit all changes when there are no staged changes.
     "editor.defaultFormatter": "HookyQR.beautify",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript"
+    ]
 }
