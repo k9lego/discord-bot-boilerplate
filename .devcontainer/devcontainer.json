@@ -17,6 +17,7 @@
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
+        "mongodb.mongodb-vscode",
         "github.vscode-pull-request-github",
         "ms-vsliveshare.vsliveshare-pack",
         "hookyqr.beautify",
@@ -35,7 +36,7 @@
     ],
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [],
+    "forwardPorts": [27017],
 
     // Specifies a command that should be run after the container has been created.
     "postCreateCommand": "yarn install",
