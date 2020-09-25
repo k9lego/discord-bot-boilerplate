@@ -1,46 +1,27 @@
-// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/javascript-node
+// Update the VARIANT arg in docker-compose.yml to pick a Node.js version: 10, 12, 14 
 {
-    "name": "Node.js",
-    "build": {
-        "dockerfile": "Dockerfile",
-        // Update 'VARIANT' to pick a Node version: 10, 12, 14
-        "args": {
-            "VARIANT": "14"
-        }
-    },
+	"name": "Node.js & Mongo DB",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
 
-    // Set *default* container specific settings.json values on container create.
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
 
-    // Add the IDs of extensions you want installed when the container is created.
-    "extensions": [
-        "mongodb.mongodb-vscode",
-        "github.vscode-pull-request-github",
-        "ms-vsliveshare.vsliveshare-pack",
-        "hookyqr.beautify",
-        "snyk-security.vscode-vuln-cost",
-        "ms-vscode.hexeditor",
-        "adambaldwin.vscode-nsp",
-        "deepcode.deepcode",
-        "pmbenjamin.vscode-snyk",
-        "eamodio.gitlens",
-        "dbaeumer.vscode-eslint",
-        "redhat.fabric8-analytics",
-        "gruntfuggly.todo-tree",
-        // Local only extensions that are "installed" in the container just to show they exist and to encourage one to install them.
-        "aaron-bond.better-comments",
-        "mikestead.dotenv"
-    ],
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"mongodb.mongodb-vscode" 
+	]
 
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [27017],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [3000, 27017],
 
-    // Specifies a command that should be run after the container has been created.
-    "postCreateCommand": "yarn install",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
 
-    // Comment out the next line to run as root instead.
-    "remoteUser": "node"
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "node"
 }

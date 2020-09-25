@@ -1,7 +1,6 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/javascript-node/.devcontainer/base.Dockerfile
-ARG VARIANT="14"
-FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
-
+# Update the VARIANT arg in docker-compose.yml to pick a Node version: 10, 12, 14
+ARG VARIANT=12
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
 # Install MongoDB command line tools
 ARG MONGO_TOOLS_VERSION=4.2
@@ -29,5 +28,7 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
 # ARG EXTRA_NODE_VERSION=10
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
 
-# [Optional] Uncomment if you want to install more global node modules
+# [Optional] Uncomment if you want to install more global node packages
 # RUN sudo -u node npm install -g <your-package-list-here>
+
+

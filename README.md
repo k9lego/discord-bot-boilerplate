@@ -1,77 +1,82 @@
-# Information Page for this Discord Bot Boilerplate
-Contains everything you need to develop a super basic Discord Bot using Visual Studio Code's Remote Development with Docker.
+# Node.js & Mongo DB
 
-## Installation and Setup
+## Summary
 
-### Windows 10 Pro+ (Tested on Pro Ver. 2004 Build 19041.508) [Does NOT work for Windows 10 Home](#windows-10-home-not-tested)
+*Develop applications in Node.js and Mongo DB. Includes Node.js, eslint, and yarn in a container linked to a Mongo DB.*
 
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+| Metadata | Value |  
+|----------|-------|
+| *Contributors* | The VS Code Team |
+| *Definition type* | Docker Compose |
+| *Works in Codespaces* | Yes |
+| *Container host OS support* | Linux, macOS, Windows |
+| *Languages, platforms* | Node.js, JavaScript, Mongo DB |
 
-Install [Visual Studio Code](https://code.visualstudio.com/).
+## Using this definition with an existing folder
 
-[Follow the Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
+This definition creates two containers, one for Node.js and one for MongoDB. VS Code will attach to the Node.js container, and from within that container the MongoDB container will be available on on **`localhost`** port 27017 The MongoDB instance can be managed in VS Code via the automatically installed MongoDB extension. Database options can be configured in `.devcontainer/docker-compose.yml` and data is persisted in a volume called `mongo-data`.
 
-### Windows 10 Home (Not Tested)
+While the definition itself works unmodified, it uses the `mcr.microsoft.com/vscode/devcontainers/javascript-node` image which includes `git`, `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development. You can pick a different version of this image by updating the `VARIANT` arg in `.devcontainer/docker-compose.yml` to pick either Node.js version 10, 12, or 14.
 
-Follow these instructions to install Docker with WSL 2 since Windows 10 Home does not have the dependencies needed.
-https://docs.docker.com/docker-for-windows/wsl/
-
-Install [Visual Studio Code](https://code.visualstudio.com/).
-
-[Follow the Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
-
-### MacOS (Not Tested)
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-
-Install [Visual Studio Code](https://code.visualstudio.com/).
-
-[Follow the Universal Instructions](#universal-Instructions-follow-the-instructions-for-your-os-then-come-here)
-
-### Debian-based Linux (Tested on Ubuntu 18.04, Does not work on WSL)
-
-**To setup on Linux is a bit more difficult than Windows 10 Pro, because your Github credentials will not be given to the container unless you do these extra steps.**
-
-First, you need to [install Docker CE/EE 18.06+ and Docker Compose 1.21+](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script). You can check [here](https://code.visualstudio.com/docs/remote/containers#_system-requirements) if the requirements have changed. 
-Note: The SNAP package **WILL NOT** work.
-
-These instructions will remove any old instances of Docker and install it using their script.
+```yaml
+build:
+  context: .
+  dockerfile: Dockerfile
+  args:
+    VARIANT: 12
 ```
-sudo apt-get remove docker docker-engine docker.io containerd runc
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker $USER
-rm get-docker.sh
+
+You also can connect to MongoDB from an external tool when using VS Code by updating `.devcontainer/devcontainer.json` as follows:
+
+```json
+"forwardPorts": [ "27017" ]
 ```
-Next, you need to install [Visual Studio Code](https://code.visualstudio.com/download). You can do this through the Ubuntu Software Center or similar Software Centers.
 
-**Now this is a very important step, missing this will prevent your containers from using your GitHub account.**
-You need to run these commands to configure your Linux machine to share your Github credentials with your Docker containers. On Ubuntu 18.04, this saves your Github to your "Keychain", however this should work on all Debian-based Linux distros especially those based on 18.04 or later.
+### Adding another service
 
-NOTE: Even if you've configured an SSH key, your Docker container is not configured to receive that key, thus this step is still needed.
+You can add other services to your `docker-compose.yml` file [as described in Docker's documentaiton](https://docs.docker.com/compose/compose-file/#service-configuration-reference). However, if you want anything running in this service to be available in the container on localhost, or want to forward the service locally, be sure to add this line to the service config:
 
-Run these commands to configure your Linux machine to your Github account, install libsecret, and tell Github to share your credentials with libsecret that:
+```yaml
+# Runs the service on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+network_mode: service:db
 ```
-sudo apt-get update 
-sudo apt install git -y 
-git config --global user.name "<INSERT YOUR GITHUB USERNAME HERE>" 
-git config --global user.email <INSERT YOUR GITHUB USERNAME HERE>@users.noreply.github.com 
-sudo apt-get install libsecret-1-0 libsecret-1-dev -y 
-cd /usr/share/doc/git/contrib/credential/libsecret 
-sudo make 
-git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret 
-mkdir ~/temp_docker/ && cd ~/temp_docker/
-git clone https://github.com/k9lego/discord-bot-boilerplate && rm -rf ~/temp_docker/
-```
-Note that you won't need the repository cloned to ``~/temp_docker/`` as cloning it is only being used to have you authenticate your GitHub credentials. If this does not work, try cloning your own private GitHub repository. Once you've authenticated with GitHub, it'll save your credentials in your Keychain and you should not need to do this again.
 
+### Adding the definition to your project
 
-## Universal Instructions (Follow the Instructions for your OS then come here)
-You'll then need to install the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Once you open up Visual Studio Code, go to the extensions tab and search for ``ms-vscode-remote.remote-containers`` and Install it.
+Just follow these steps:
 
-Now open the Command Palette. To open it, hit F1. Otherwise right click the green icon in the lower right corner will get you the ``Remote-Containers`` commands.
+1. If this is your first time using a development container, please follow the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started) to set up your machine.
 
-Now click ``Remote-Containers: Clone Repository in Container Volume...``
+2. To use VS Code's copy of this definition:
+   1. Start VS Code and open your project folder.
+   2. Press <kbd>F1</kbd> select and **Remote-Containers: Add Development Container Configuration Files...** from the command palette.
+   3. Select the Node.js & Mongo DB definition.
 
-Finally, select ``Create a Unique Volume`` and your workspace should be setup!
+3. To use latest-and-greatest copy of this definition from the repository:
+   1. Clone this repository.
+   2. Copy the contents of `containers/javascript-node-mongo/.devcontainer` to the root of your project folder.
+   3. Start VS Code and open your project folder.
 
+4. After following step 2 or 3, the contents of the `.devcontainer` folder in your project can be adapted to meet your needs.
 
+5. Finally, press <kbd>F1</kbd> and run **Remote-Containers: Reopen Folder in Container** to start using the definition.
+
+## Testing the definition
+
+This definition includes some test code that will help you verify it is working as expected on your system. Follow these steps:
+
+1. If this is your first time using a development container, please follow the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started) to set up your machine.
+2. Clone this repository.
+3. Start VS Code, press <kbd>F1</kbd>, and select **Remote-Containers: Open Folder in Container...**
+4. Select the `containers/javascript-node-mongo` folder.
+5. After the folder has opened in the container, press <kbd>F5</kbd> to start the project. This will automatically run `npm install` before starting it.
+6. Once the project is running, press <kbd>F1</kbd> and select **Remote-Containers: Forward Port from Container...**
+7. Select port 3000 and click the "Open Browser" button in the notification that appears.
+8. You should see "Hello remote world! 1 test record(s) found." after the page loads.
+9. From here, you can add breakpoints or edit the contents of the `test-project` folder to do further testing.
+
+## License
+
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Licensed under the MIT License. See [LICENSE](https://github.com/Microsoft/vscode-dev-containers/blob/master/LICENSE).

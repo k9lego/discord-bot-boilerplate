@@ -1,15 +1,8 @@
 {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": false,
-    "editor.tabSize": 4,
-    "files.autoSave": "afterDelay",
-    "git.autofetch": true,
-    "git.autofetchPeriod": 180,
-    "git.autorefresh": true,
-    "git.autoRepositoryDetection": true,
-    "git.confirmEmptyCommits": true,
-    "git.confirmForcePush": true,
-    "git.enableSmartCommit": true, // Commit all changes when there are no staged changes.
-    "editor.defaultFormatter": "HookyQR.beautify",
+    "eslint.workingDirectories": [
+        {
+            "directory": "./test-project",
+            "changeProcessCWD": true
+        }
+    ]
 }
