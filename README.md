@@ -1,6 +1,6 @@
 # Information Page for this Discord Bot Boilerplate
 Contains everything you need to develop a super basic Discord Bot using Visual Studio Code's Remote Development with Docker.
-
+Note: We are using Docker so we can get consistent results for each setup across platforms. You will NOT need to enable hardware virtualization.
 ## Installation and Setup
 
 ### Windows 10 Pro+ (Tested on Pro Ver. 2004 Build 19041.508) [Does NOT work for Windows 10 Home](#windows-10-home-not-tested)
